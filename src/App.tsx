@@ -62,6 +62,18 @@ function App() {
           <p className="form-message" role="status">{message}</p>
         </form>
 
+        <div className="social-login">
+          <p className="social-divider"><span>또는 간편 로그인</span></p>
+          <div className="social-buttons">
+            <button type="button" className="social-btn social-btn--google" aria-label="Google 계정으로 로그인">
+              <img src="/icons/google.svg" alt="" width={22} height={22} aria-hidden="true" />
+            </button>
+            <button type="button" className="social-btn social-btn--kakao" aria-label="카카오 계정으로 로그인">
+              <img src="/icons/kakao.svg" alt="" width={24} height={24} aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+
         <p className="signup-prompt">
           아직 회원이 아니신가요? <a href="#">회원가입</a>
         </p>
