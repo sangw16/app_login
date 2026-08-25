@@ -79,6 +79,16 @@ button { width: 100%; height: 56px; margin-top: 8px; border: 0; border-radius: 1
 button:hover { background: #278d3a; box-shadow: 0 12px 22px rgba(54, 165, 74, .27); transform: translateY(-2px); }
 button:active { transform: translateY(0); }
 .form-message { min-height: 20px; margin: 10px 0 0; color: #d26337; font-size: 12px; text-align: center; }
+.social-login { margin-top: 26px; }
+.social-divider { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; color: #9aa39c; font-size: 12px; font-weight: 600; }
+.social-divider::before, .social-divider::after { content: ''; flex: 1; height: 1px; background: #e6ece5; }
+.social-buttons { display: flex; align-items: center; justify-content: center; gap: 14px; }
+.social-btn { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; margin-top: 0; padding: 0; border-radius: 50%; box-shadow: 0 4px 12px rgba(40, 71, 44, .1); }
+.social-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(40, 71, 44, .16); }
+.social-btn--google { border: 1px solid #e2e8e2; background: #fff; }
+.social-btn--google:hover { background: #f7faf7; }
+.social-btn--kakao { background: #fee500; }
+.social-btn--kakao:hover { background: #f2da00; }
 .signup-prompt { margin: 22px 0 0; color: #879087; font-size: 13px; }
 .signup-prompt a { color: #2f9945; font-weight: 700; text-decoration: none; }
 .signup-prompt a:hover { text-decoration: underline; }
