@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #172018;
+  background: #f5f8f3;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  background: radial-gradient(circle at 10% 10%, #edf7e9 0, transparent 34%), #f7faf5;
+}
+
+.login-card {
+  position: relative;
+  width: min(100%, 468px);
+  padding: 42px 48px 40px;
+  border: 1px solid #e5ebe2;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, .96);
+  box-shadow: 0 24px 70px rgba(40, 71, 44, .12);
+  text-align: center;
+}
+
+.back-link {
+  position: absolute;
+  top: 27px;
+  left: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #778078;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+.back-link:hover { color: #319644; }
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  margin: 16px auto 12px;
+  border-radius: 22px 22px 22px 7px;
+  color: #fff;
+  background: #3aab4d;
+  transform: rotate(-5deg);
+  box-shadow: 0 10px 20px rgba(58, 171, 77, .23);
+}
+.brand-mark svg { transform: rotate(5deg); }
+.brand-name { margin: 0; color: #1d3021; font-size: 22px; font-weight: 800; letter-spacing: -.05em; }
+.eyebrow { margin: 28px 0 8px; color: #329348; font-size: 13px; font-weight: 700; }
+h1 { margin: 0; color: #172018; font-size: clamp(25px, 5vw, 31px); font-weight: 800; letter-spacing: -.07em; line-height: 1.25; }
+.intro { margin: 12px 0 30px; color: #79827b; font-size: 14px; line-height: 1.6; }
+
+form { text-align: left; }
+label { display: block; margin: 0 0 8px; color: #27352a; font-size: 13px; font-weight: 700; }
+label + .input-wrap { margin-bottom: 20px; }
+.input-wrap { display: flex; align-items: center; gap: 10px; height: 54px; padding: 0 16px; border: 1px solid #dfe7df; border-radius: 13px; color: #95a199; background: #fbfdfb; transition: border-color .2s ease, box-shadow .2s ease, background .2s ease; }
+.input-wrap:focus-within { border-color: #42a853; background: #fff; box-shadow: 0 0 0 4px rgba(66, 168, 83, .11); }
+.input-wrap input { width: 100%; border: 0; outline: 0; color: #172018; background: transparent; font-size: 14px; }
+.input-wrap input::placeholder { color: #aab3ad; }
+button { width: 100%; height: 56px; margin-top: 8px; border: 0; border-radius: 13px; color: #fff; background: #36a54a; box-shadow: 0 9px 18px rgba(54, 165, 74, .2); cursor: pointer; font-size: 16px; font-weight: 700; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+button:hover { background: #278d3a; box-shadow: 0 12px 22px rgba(54, 165, 74, .27); transform: translateY(-2px); }
+button:active { transform: translateY(0); }
+.form-message { min-height: 20px; margin: 10px 0 0; color: #d26337; font-size: 12px; text-align: center; }
+.signup-prompt { margin: 22px 0 0; color: #879087; font-size: 13px; }
+.signup-prompt a { color: #2f9945; font-weight: 700; text-decoration: none; }
+.signup-prompt a:hover { text-decoration: underline; }
+
+@media (max-width: 520px) {
+  .login-page { padding: 20px 14px; }
+  .login-card { padding: 38px 24px 30px; border-radius: 22px; }
+  .back-link { top: 21px; left: 22px; }
+  .brand-mark { margin-top: 25px; }
+}
